@@ -1,0 +1,45 @@
+Part - I 
+
+	Pentru ceritna generate_probabilities_system am observat ca pot sa mi construiesc
+o matrice care sa simuleze labirintul , dupa ce am generat aceasta matrice am observat ca 
+pentru colturile "labirintului" voi avea probleme in testarea unor cazuri asa ca am decis
+sa bordez matricea cu 0. Urmatoarul pas s-a rezumat la a gasi termenii care sunt diferiti
+de 0 si precum o strategie de "battleship" sa verific daca in vecinataile acestui element (stanga sus , sus , dreapta sus , stanga , dreapta , stanga jos , jos ,dreapta jos) 
+se afla o alta valoare nenula vom pune in matricea de generare a probabilitatilor -1 si contorul care tine minte vecinii va creste. 
+	
+	Pentru cerinta matrix_to_csr vectorul values a fost realizat cu ajutorul (A'~=0)' 
+care realizeaza o matricea cu 1 pe pozitia elementelor nenule din matricea data , aceasta matrice este inmultita cu matricea transpusa pentru a obtine un vector linie de valori diferite de 0 . Vectroul colind a fost realizat prin parcurgerea fiecarei linii in parte 
+si cu ajutorul functiei find care returneaza pozitia uni element nenul , daca este la 
+prima linie vectroul  colind va lua direct valoarea respectiva daca nu se va lipi de 
+valoarea deja existenta . Vectroul rowptr s-a obtinut prin parcurgerea matricei elelemt 
+cu element iar in momentul in care da de un element nenul acesta va cauta in vectorul 
+values pentru a-i determina pozitia , iar la final se aduaga numarul de elemente diferite
+de 0 .
+	
+  	Pentru Jacobi_factorization initial extrag matricea D (matricea diagonala) , L (matricea inferior triunghiulara) , U ( matricea superior triunghiulara) cu ajutorul 
+carora construiesc matricea de iteratie G_J si vectorul de iteratie c_J .
+
+	Pentru Jacobi_sparse am reconstruit matricea in forma ei densa iar apoi am 
+obtinut acuratetea dorita prin procedeul Jacobi .
+
+
+Part - II
+
+	Pentru cerinta clustering_pc imi formez NC clustere in care voi introduce punctele care respecta proprietatea din enunt . Gasesc primul set de centroizi care sunt initializati cu media aritmetica a punctelor din cluster (centroidul i va fi media punctelor clusterului
+i ). Apoi vom intra intr-o structura repetitvia a carei iesire va consta in faptul ca setul centoids actualizat va fi acelasi cu cel vechi . Aceasta secventa consta in a introduce 
+fiecare punct in clusterul a cel mai apropiat centroid ca mai apoi sa se realizeze media aritmetica .
+
+	Pentru compute_cost_pc imi initializez un cluster care sa contina pe prima pozitie centroidul apoi gasesc distanta minima de la fiecare punct la centoid asa ca introduc acele 
+puncte in clusterul care conine centoidul respectiv ca mai apoi sa realizez costul de la fiecare punct la centtroid .
+
+Part - III
+
+	Pentru rgbHistogram initial accesesz imaginea prin functia imread , air apoi pentru fiecare linie a fiecarei culoari in parte folosesc functia histc pentru a vedea cate valori 
+din rangeul dat se gasesc pe linia respectiva , daca este prima linie aceasta va fi initializata cu vectroul returnata de histc altfel rezultatul va fi suma a ceea ce exista si
+valoarea returnata de histc
+
+	Pentru hsvHistogram am realizat o functie ajutatoare transformRGBtoHSV care imi va trasforma fiecare pixel dintr-o structura RGB in una HSV apoi se repeta pasii de la rgbHistogram  
+	
+	
+
+
