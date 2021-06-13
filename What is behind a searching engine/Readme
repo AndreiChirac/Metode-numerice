@@ -1,0 +1,60 @@
+Andrei Chirac
+311CD
+
+ITERATIVE
+
+
+	Pentru inceput am citit din fisier datele de intrare si in acelasi timp 
+am constuit matricea A care reprezinta matricea de adiacenta dar si K care este 
+matricea diagonala . 
+
+	Aceasta are pe diagonal sa numarul de linkuri de la paginile pe care
+poti ajunge , luand in considerare ca tot ce se afla pe diagonala matricei de 
+adiacenta este ignorat . 
+	
+	Am construit M ca fiind transpusa produslui dinte inversa maricei K 
+si matricea A.
+	
+	Pentru a putea folosi o structura repetititva primul pas a fost facut 
+inainte pentru a se putea testa care este eroarea si a se intra in while .
+
+	Apoi in structura repetitiva am actualizat R-ul pana cand 
+ajung la eroarea dorita conform formulelor din tema . R-ul de la pasul (t+1) 
+fiind calculat cu ajutorul lui Rfirst care reprezinta R-ul de la pasul 
+anterior (t).
+ 
+	 
+ALGEBRAIC 
+	
+	La fel ca la abordarea trecuta , mai intai am constiut matricea 
+de adiacenta si matricea diagonala cu ajutorur carora am reusit sa calculez si matricea M 
+	
+	Inversa matricei care repezinta diferenta dintre matricea Identitate si matricea M inmultita cu probabilitatea oferita a fost calculata
+cu ajutorul algoritmuli Gram-Schmidt optimizat , fiind produsul dinte inversa lui R si Q transpus . 
+	
+	R fiind calcualt mai apoi dupa formulele oferite in materialele de tip suport
+
+Apartenenta 
+
+	Am calculat limitele laterale pentru a se valida propretatea de continuitate , afland a si b in functie de val1 si val2
+
+	Y fiind calculat in functie de intervalul in care se afla x 
+
+Page Rank
+
+	In aceasta aprte am scris in fisiere datele cerute , apeland functiile implementate anterior .
+
+	Un caz deosebit a constat clasamentul celor mai importante pagini care a fost optinut prin mai multi pasi . 
+
+	Initial la vectorul R2 am adugat un vector coloana care contineau indicii de la 1 la numarul de pagini
+	
+	Al doilea pas a fost constituit din a sorta descrescator dupa coloana
+initala a lui R2 , indicii fiind corespunzand valorilor initiale
+
+	Apoi apeland functia de apartenenta am putut sa realizez ultima scriere in fisier 
+	
+
+	
+		
+	
+ 
